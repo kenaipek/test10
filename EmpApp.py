@@ -258,7 +258,7 @@ def CalpayRoll():
 
 #Attendance 
 @app.route("/leaveapplication/")
-def attendance():
+def leaveapplication():
     return render_template("leaveapplication.html",date=datetime.now())
 
 # RMB TO CHANGE PORT NUMBER
