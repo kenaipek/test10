@@ -272,37 +272,13 @@ def leaveapplicationoutput():
     reason = request.form['reason']
     application_date = request.form['application_date']
     approval = 'pending'
-    insert_sql_leave = "INSERT INTO leave VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    #insert_sql_leave = "INSERT INTO leave VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s,%s)"
     cursor = db_conn.cursor()
 
     try:
-
-        # cursor.execute(insert_sql_leave, (emp_id, emp_name, emp_ic, num_of_days, start_date, end_date, type_of_leave, reason, application_date, approval))
-        cursor.execute(insert_sql_leave, ("trial", "trial", "trial", "trial", "trial", "trial", "trial", "trial", "trial", "trial"))
+        cursor.execute(insert_sql, (emp_id, emp_id, emp_id, emp_id, emp_id, emp_id))
         db_conn.commit()
-        
-        # # Uplaod image file in S3 #
-        # emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + "_image_file"
-        # s3 = boto3.resource('s3')
-
-        # try:
-        #     print("Data inserted in MySQL RDS... uploading image to S3...")
-        #     s3.Bucket(custombucket).put_object(Key=emp_image_file_name_in_s3, Body=emp_image_file)
-        #     bucket_location = boto3.client('s3').get_bucket_location(Bucket=custombucket)
-        #     s3_location = (bucket_location['LocationConstraint'])
-
-        #     if s3_location is None:
-        #         s3_location = ''
-        #     else:
-        #         s3_location = '-' + s3_location
-
-        #     object_url = "https://s3{0}.amazonaws.com/{1}/{2}".format(
-        #         s3_location,
-        #         custombucket,
-        #         emp_image_file_name_in_s3)
-
-        # except Exception as e:
-        #     return str(e)
 
     finally:
         cursor.close()
