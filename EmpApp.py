@@ -273,11 +273,12 @@ def leaveapplicationoutput():
     application_date = request.form['application_date']
     approval = 'pending'
     #insert_sql_leave = "INSERT INTO leave VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-    insert_sql = "INSERT INTO leave VALUES (%s, %s, %s, %s, %s,%s)"
+    insert_sql = "INSERT INTO attendance VALUES (%s, %s, %s, %s, %s)"
+    insert_sql = "INSERT INTO "
     cursor = db_conn.cursor()
 
     try:
-        cursor.execute(insert_sql, (emp_id, emp_id, emp_id, emp_id, emp_id, emp_id))
+        cursor.execute(insert_sql, (emp_id, emp_name, emp_ic, emp_id, emp_id))
         db_conn.commit()
 
     finally:
