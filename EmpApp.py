@@ -286,6 +286,11 @@ def leaveapplicationoutput():
     print("all modification done...")
     return render_template('leaveapplicationoutput.html', name=emp_name)
 
+#Leave Approval 
+@app.route("/leaveapproval/")
+def leaveapproval():
+    return render_template("leaveapproval.html",date=datetime.now())
+
 # RMB TO CHANGE PORT NUMBER
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True) # or setting host to '0.0.0.0'
