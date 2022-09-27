@@ -277,7 +277,7 @@ def leaveapplicationoutput():
     cursor = db_conn.cursor()
 
     try:
-        cursor.execute(insert_sql, (emp_id, emp_name, emp_ic, emp_id, emp_id))
+        cursor.execute(insert_sql, (emp_id, emp_name, emp_ic, num_of_days, start_date, end_date, type_of_leave, reason, application_date, approval))
         db_conn.commit()
 
     finally:
