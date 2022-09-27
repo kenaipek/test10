@@ -263,7 +263,7 @@ def leaveapplication():
 def leaveapplicationoutput():
 
     emp_id = request.form['emp_id']
-    emp_name = request.form['name']
+    emp_name = request.form['emp_name']
     emp_ic = request.form['emp_ic']
     num_of_days = request.form['num_of_days']
     start_date = request.form['start_date']
