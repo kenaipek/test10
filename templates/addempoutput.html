@@ -219,7 +219,6 @@
       font-weight: 500;
       letter-spacing: 0.1em;
     }
-
   </style>
 </head>
 
@@ -265,12 +264,13 @@
                 <div class="form-container form-container-add">
                   <div class="form-bubble body-container">
                     <h1 style="font-size: 40px;">Employee successfully added</h1>
+                    <div>
+                      <h2 style="font-size: 25px;">Following Employee has been added to the database</h2>
+                    </div>
                     <br>
-                    <br>
-                    <h2 style="font-size: 30px;">Following Employee has been added to the database</h2>
-                    <br>
-                    <br>
-                    <h3 style="font-size: 30px;">{{ name }}</h3>
+                    <div>
+                    <h3 style="font-size: 25px;">{{ name }}</h3>
+                    </div>
                     <br>
                   </div>
                   <div class="button-container">
@@ -308,7 +308,8 @@
       <div class="6u">
         <section id="box2">
           <h2>Donec dictum metus</h2>
-          <div class="border-img"> <a href="#"><img src="{{ url_for('static', filename='img/pics02.jpg')}}" alt=""></a> </div>
+          <div class="border-img"> <a href="#"><img src="{{ url_for('static', filename='img/pics02.jpg')}}" alt=""></a>
+          </div>
           <p>Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia,
             venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod
             lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo
